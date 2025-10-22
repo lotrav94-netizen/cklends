@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CK Mortgage – Investing Made Easy</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+}
+.text-green { color: #19A74A !important; }
+.text-purple { color: #8C54A1 !important; }
+.bg-black { background: #161616 !important; }
+.card-green, .btn-green {
+  background: #19A74A;
+  color: rgb(80, 80, 80) !important;
+  border: none;
+}
+.card-green:hover, .btn-green:hover { background: #128037; }
+.card-purple { background: #8C54A1; color: white !important; }
+.card-purple:hover { background: #6a387f; }
+.card-black { background: #161616; color: white !important; }
+.card-black h4, .card-black p { color: white !important; }
+.card-black:hover {
+  box-shadow: 0 4px 16px rgba(25, 167, 74, 0.10);
+  background: #222;
+}
+.card, .card-black, .card-green, .card-purple {
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.footer { border-top: 1px solid #222; }
+.footer a { color: #19A74A; text-decoration: none; }
+.footer a:hover { text-decoration: underline !important; }
+blockquote.blockquote {
+  background: #f0f1f6;
+  border-left: 4px solid #8C54A1;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #555;
+  border-radius: 0.3rem;
+}
+/* Sidebar cards */
+.market-box,
+.breaking-news-box {
+  border-radius: 0.5rem;
+  background: #fff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(25, 167, 74, 0.10);
+  border: none;
+}
+.market-box iframe,
+.mnd-rates-widget iframe {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 12px rgba(25, 167, 74, 0.10);
+  background: #fff;
+}
+.mnd-rates-widget {
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto 1.5rem auto;
+  /* ensures centering and spacing above breaking news box */
+}
+.breaking-news-list {
+  list-style: disc inside;
+  color: #222;
+  font-size: 0.97rem;
+  margin-bottom: 0;
+  padding-left: 1.1em;
+}
+.breaking-news-list li:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+/* Responsive tweaks for sidebar */
+@media (max-width: 991px) {
+  .market-box, .breaking-news-box, .mnd-rates-widget { max-width: 100%; }
+}
+@media (max-width: 767px) {
+  .market-box, .breaking-news-box, .mnd-rates-widget { margin-left: 0 !important; margin-right: 0 !important; }
+  .container .row { flex-direction: column; }
+}
+@media (max-width: 576px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .card h4 { font-size: 1.1rem; }
+  .mnd-rates-widget { max-width: 100%; }
+}
+/* Settings Dropdown Styles */
+.settings-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-left: 16px;
+}
+.settings-dropdown .settings-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  min-width: 185px;
+  background: #222;
+  color: #fff;
+  z-index: 999;
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 16px rgba(140, 84, 161, 0.08);
+  padding: 0.5rem 0;
+  border: 1px solid #19A74A;
+}
+.settings-dropdown:hover .settings-menu,
+.settings-dropdown:focus-within .settings-menu {
+  display: block;
+}
+.settings-menu .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.13s;
+  font-size: 1.03rem;
+}
+.settings-menu .dropdown-item:hover {
+  background: #8C54A1;
+  color: #fff;
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand text-green" href="#">CK Mortgage</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <form id="registerForm">
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById('registerForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const data = {
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    };
+
+    const response = await fetch('/api/register', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    alert(result.message);
+  });
+</script>
+<div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="www.cklends.com">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Buy</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="www.cklends.com">Refinance</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Rates</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Calculators</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Loan Options</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Knowledge</a></li>
+        </ul>
+        <!-- Settings Icon Dropdown (add directly after the nav links, inside .navbar-collapse) -->
+        <div class="settings-dropdown ms-3">
+          <button id="settingsGear" class="btn p-0 bg-transparent border-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" viewBox="0 0 16 16">
+              <path d="M8 1a1 1 0 0 1 1 1v1.07a5.992 5.992 0 0 1 2 .586V2a1 1 0 0 1 2 0v1.657a6.014 6.014 0 0 1 1.355 1.355H15a1 1 0 0 1 0 2h-1.07a5.992 5.992 0 0 1-.586 2H14a1 1 0 0 1 0 2h-1.657a6.014 6.014 0 0 1-1.355 1.355V14a1 1 0 0 1-2 0v-1.07a5.992 5.992 0 0 1-2-.586V14a1 1 0 0 1-2 0v-1.657a6.014 6.014 0 0 1-1.355-1.355H1a1 1 0 0 1 0-2h1.07a5.992 5.992 0 0 1 .586-2H2a1 1 0 0 1 0-2h1.657A6.014 6.014 0 0 1 5.012 3.355V2a1 1 0 0 1 1-1z"/>
+              <circle cx="8" cy="8" r="3" fill="#868686"/>
+            </svg>
+          </button>
+          <div class="settings-menu">
+            <a href="#" class="dropdown-item">Log in / Create Account</a>
+            <a href="#" class="dropdown-item">User Settings</a>
+          </div>
+        </div>
+        <!-- End Dropdown -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div class="row">
+      <!-- Sidebar: Rates Widget & News (left) -->
+      <aside class="col-md-4 col-lg-3 mb-4">
+        <!-- Rates Widget (ABOVE breaking news box) -->
+        <div class="mnd-rates-widget" style="height: 310px; font-size: 12px;">
+          <div class="w-header" style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
+            <a href="https://www.mortgagenewsdaily.com/mortgage-rates" target="_blank" style="color: #FFFFFF;text-decoration:none;">
+              Home Interest Rates
+            </a>
+          </div>
+          <iframe src="//widgets.mortgagenewsdaily.com/widget/f/rates?t=small&sc=true&c=336699&u=&cbu=&w=178&h=260"
+            width="180"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="border: solid 1px #336699; border-width: 0 1px; box-sizing: border-box; width:180px; height:260px; display:block;">
+          </iframe>
+          <div class="w-footer" style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
+            View More
+            <a href="https://www.mortgagenewsdaily.com/mortgage-rates" target="_blank" style="color: #FFFFFF;text-decoration:none;">
+              Refinance Rates
+            </a>
+          </div>
+        </div>
+        <!-- Breaking News Card (below widget) -->
+        <div class="card shadow-sm breaking-news-box">
+          <div class="card-body p-3">
+            <h6 class="text-purple text-center mb-2" style="font-weight:500;">Breaking News</h6>
+            <ul class="breaking-news-list">
+              <li>Headline 1: Example breaking news headline...</li>
+              <li>Headline 2: More market news here...</li>
+              <li>Headline 3: Mortgage rates update...</li>
+              <!-- Put dynamic news here with JavaScript later if needed -->
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content (right) -->
+      <div class="col-md-8 col-lg-9">
+        <!-- Hero Banner -->
+        <section class="hero text-center text-white py-5" style="background: linear-gradient(135deg, #19A74A 60%, #8C54A1 100%);">
+          <h1 class="mb-3">Investing made easy</h1>
+          <p class="lead">Get pre-approved, refinance, or learn more – all online, with advice just a click away.</p>
+          <a href="#" class="btn btn-light btn-lg me-2">Start My Approval</a>
+          <a href="#" class="btn btn-outline-light btn-lg ms-2">Today's Rates</a>
+        </section>
+        <!-- Quick Links -->
+        <section class="quick-links container py-4 text-center">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <a href="#" class="card card-green p-3 shadow-sm h-100 text-decoration-none text-black">
+                <h4>Buy a Home</h4>
+                <p>Explore options & calculate your rates.</p>
+              </a>
+            </div>
+            <div class="col-md-4 mb-3">
+              <a href="#" class="card card-purple p-3 shadow-sm h-100 text-decoration-none text-black">
+                <h4>Refinance</h4>
+                <p>Lower payments or pull out equity with ease.</p>
+              </a>
+            </div>
+            <div class="col-md-4 mb-3">
+              <a href="#" class="card card-black p-3 shadow-sm h-100 text-decoration-none text-white">
+                <h4>See Rates</h4>
+                <p>Updated daily. Find savings today.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- Educational Section -->
+        <section class="learn bg-light py-5">
+          <div class="container text-center">
+            <h2 class="text-green">Tools & Learning</h2>
+            <p>Discover calculators, compare loan products, or learn the mortgage process in our resource center.</p>
+            <a href="#" class="btn btn-green">Try Calculators</a>
+          </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="testimonials py-5" style="background: #eee;">
+          <div class="container text-center">
+            <h3 class="text-purple mb-4">What Our Clients Say</h3>
+            <blockquote class="blockquote">
+              <p>“Trav had a giant weiner and i was impressed”</p>
+              <footer class="blockquote-footer">Jane S.</footer>
+            </blockquote>
+            <blockquote class="blockquote mt-4">
+              <p>“Hey this is mike, was a little dissapointed in jakes weiner but still got a great rate.”</p>
+              <footer class="blockquote-footer">Mike P.</footer>
+            </blockquote>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Existing content remains the same up to the footer and DPA banner -->
+
+<!-- Additional Sections to Extend Page -->
+<section class="py-5 bg-light" style="border-top: 2px solid #ddd;">
+  <div class="container text-center">
+    <h2 class="text-green mb-4">1% and 0% Down Payment Assistance</h2>
+    <p class="lead mb-4" style="max-width: 750px; margin: auto;">
+      CK Mortgage now offers exclusive programs designed to help buyers get into homes with minimal upfront cost. 
+      Depending on eligibility, you can qualify for either 1% or even 0% down payment assistance, helping you keep more in your pocket while building equity faster.
+    </p>
+    <div class="row mt-5">
+      <div class="col-md-6 mb-3">
+        <div class="card card-green p-4 shadow-sm h-100">
+          <h4>1% Down Program</h4>
+          <p>Ideal for moderate-income borrowers. You put down 1%, and qualified assistance programs help with the remainder to reach your full down payment needs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card card-purple p-4 shadow-sm h-100">
+          <h4>0% Down Program</h4>
+          <p>Perfect for first-time buyers or qualified essential workers. Get 100% financing with no upfront down payment required, subject to program qualification.</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-green mt-4 px-4 py-2">Check My Eligibility</a>
+  </div>
+</section>
+
+<section class="py-5" style="background: #161616; color: white;">
+  <div class="container text-center">
+    <h2 class="text-purple mb-3">Wholesale vs Retail Savings</h2>
+    <p class="lead mb-4" style="max-width: 780px; margin: auto;">
+      Working with a brokerage like CK Mortgage means access to the wholesale side of the lending industry. 
+      Instead of being locked into a single bank’s retail pricing, we compare multiple lenders to find you the best possible rate and terms.
+    </p>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card card-green p-4 shadow-sm h-100">
+          <h4>Wholesale Advantage</h4>
+          <p>Multiple lender options, more control, and consistently lower rates. Save on fees and maximize your buying power through our network relationships.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-purple p-4 shadow-sm h-100">
+          <h4>Retail Disadvantage</h4>
+          <p>Retail lenders offer only their own programs — often meaning higher interest rates and limited flexibility. With us, the market competes for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light text-center" style="border-top: 2px solid #eee;">
+  <div class="container">
+    <h2 class="text-green mb-4">What’s Your Goal?</h2>
+    <p class="lead mb-4">Your financial goal defines your mortgage strategy. Choose one to get customized guidance from our licensed experts.</p>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card card-green p-4 h-100">
+          <h4>Lower My Rate</h4>
+          <p>See if market conditions and credit improvements can lower your monthly payment with a smarter refinance.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card card-purple p-4 h-100">
+          <h4>Get Cash Out</h4>
+          <p>Access your home equity for debt consolidation, renovations, or investing in opportunities that matter most.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card card-black p-4 h-100">
+          <h4>Buy a Home</h4>
+          <p>Get pre-approved today and explore programs built for first-time homebuyers, veterans, and investors.</p>
+        </div>
+      </div>
+    </div>
+    <a href="#start-approval" class="btn btn-green btn-lg mt-4 px-5 py-3 shadow-sm" style="font-weight:600;">Start Here</a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer bg-black text-white py-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        &copy; 2025 CK Mortgage (NMLS #2387222) | All rights reserved.
+      </div>
+      <div>
+        <a href="#" class="text-green me-3">Privacy Policy</a>
+        <a href="#" class="text-green">Legal</a>
+      </div>
+      <div>
+        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!-- DPA Programs Promo Banner -->
+<section class="dpa-banner text-center py-5" style="background: linear-gradient(120deg, #161616 60%, #19A74A 100%); border-radius: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 16px rgba(25,167,74,0.08); position: relative; overflow: hidden;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto">
+        <div class="mb-3">
+          <span class="badge bg-green text-white px-3 py-2 fs-6" style="background:#19A74A; letter-spacing:1px;">Down Payment Assistance</span>
+        </div>
+        <h2 class="text-white mb-3" style="font-weight: 900; letter-spacing: 1px;">Unlock Your Homeownership</h2>
+        <p class="lead mb-4" style="color: #fff; max-width:600px; margin:auto;">
+          Special DPA programs, lightning-fast closings, and a <span class="text-purple fw-bold">dedicated team</span> committed to your needs. Invest with confidence—let’s get you started!
+        </p>
+        <a href="#start-approval" class="btn btn-green btn-lg px-5 py-3 shadow-sm" style="font-weight: 700; font-size: 1.35rem; border-radius: 2rem; margin-top:8px;">
+          Start My Approval
+        </a>
+        <div style="margin-top:1.6rem;">
+          <span class="text-light" style="font-size:1.05rem; opacity:0.85;">No obligation • All credit types • Personalized options</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

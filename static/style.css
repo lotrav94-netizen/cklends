@@ -1,0 +1,64 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+.text-green { color: #19A74A !important; }
+.text-purple { color: #8C54A1 !important; }
+.bg-black { background: #161616 !important; }
+
+.card-green, .btn-green {
+  background: #19A74A;
+  color: rgb(80, 80, 80) !important;
+  border: none;
+}
+.card-green:hover, .btn-green:hover {
+  background: #128037;
+}
+.card-purple {
+  background: #8C54A1;
+  color: white !important;
+}
+.card-purple:hover {
+  background: #6a387f;
+}
+.card-black {
+  background: #161616;
+  color: white !important;
+}
+.card-black h4, .card-black p {
+  color: white !important;
+}
+.card-black:hover {
+  box-shadow: 0 4px 16px rgba(25, 167, 74, 0.10);
+  background: #222;
+}
+.card, .card-black, .card-green, .card-purple {
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.footer {
+  border-top: 1px solid #222;
+}
+.footer a {
+  color: #19A74A;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline !important;
+}
+blockquote.blockquote {
+  background: #f0f1f6;
+  border-left: 4px solid #8C54A1;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #555;
+  border-radius: 0.3rem;
+}
+@media (max-width: 576px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .card h4 { font-size: 1.1rem; }
+}
