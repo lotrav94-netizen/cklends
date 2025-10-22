@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy – CK Mortgage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f6fa;
+        }
+
+        .text-green { color: #19A74A !important; }
+        .text-purple { color: #8C54A1 !important; }
+        .bg-black { background: #161616 !important; }
+
+        .card-green, .btn-green {
+            background: #19A74A;
+            color: rgb(80, 80, 80) !important;
+            border: none;
+        }
+        .card-green:hover, .btn-green:hover {
+            background: #128037;
+        }
+        .card-purple {
+            background: #8C54A1;
+            color: white !important;
+        }
+        .card-purple:hover {
+            background: #6a387f;
+        }
+        .card-black {
+            background: #161616;
+            color: #fff !important;
+            border: none;
+        }
+        .card-black h4, .card-black p {
+            color: #fff !important;
+        }
+        .card-black:hover {
+            box-shadow: 0 4px 16px rgba(25, 167, 74, 0.10);
+            background: #222;
+        }
+        .card, .card-black, .card-green, .card-purple {
+            border-radius: 0.5rem;
+            transition: box-shadow 0.2s, background 0.2s;
+        }
+
+        .footer {
+            border-top: 1px solid #222;
+        }
+        .footer a {
+            color: #19A74A;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline !important;
+        }
+        blockquote.blockquote {
+            background: #f0f1f6;
+            border-left: 4px solid #8C54A1;
+            padding: 1rem 2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #555;
+            border-radius: 0.3rem;
+        }
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .card h4 { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand text-green" href="#">CK Mortgage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active" href="#">Buy</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Refinance</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Rates</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Calculators</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Loan Options</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Knowledge</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Buy Hero Section -->
+    <section class="hero text-center text-white py-5" style="background: linear-gradient(135deg, #8C54A1 60%, #19A74A 100%);">
+        <h1 class="mb-3">Buy Your Home With Confidence</h1>
+        <p class="lead">Secure your dream home with expert guidance, competitive rates, and a simple application process.</p>
+        <a href="YOUR_PURCHASE_APP_LINK.html" class="btn btn-light btn-lg me-2">Start My Purchase Application</a>
+        <a href="rates.html" class="btn btn-outline-light btn-lg ms-2">See Today's Rates</a>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="container py-5 text-center">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card card-green p-3 shadow-sm h-100">
+                    <h4>Fast Pre-Approval</h4>
+                    <p>Get qualified quickly and shop with confidence.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card card-purple p-3 shadow-sm h-100">
+                    <h4>Flexible Loan Options</h4>
+                    <p>Custom solutions for first-time buyers, move-ups, and investors.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card card-black p-3 shadow-sm h-100">
+                    <h4>Homebuying Support</h4>
+                    <p>Our team helps you navigate every step, stress-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5" style="background: #eee;">
+        <div class="container text-center">
+            <h3 class="text-purple mb-4">What Homebuyers Say</h3>
+            <blockquote class="blockquote">
+                <p>“CK Mortgage made our home buying process so smooth and easy!”</p>
+                <footer class="blockquote-footer">The Johnson Family</footer>
+            </blockquote>
+            <blockquote class="blockquote mt-4">
+                <p>“We always felt supported through every step. Highly recommend!”</p>
+                <footer class="blockquote-footer">Anthony & Mia R.</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Footer (same as main site) -->
+    <footer class="footer bg-black text-white py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div>
+                &copy; 2025 CK Mortgage (NMLS #2387222) | All rights reserved.
+            </div>
+            <div>
+                <a href="#" class="text-green me-3">Privacy Policy</a>
+                <a href="#" class="text-green">Legal</a>
+            </div>
+            <div>
+                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

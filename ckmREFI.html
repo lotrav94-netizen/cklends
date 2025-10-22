@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refinance – CK Mortgage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f5f6fa;
+    }
+    .text-green { color: #19A74A !important; }
+    .text-purple { color: #8C54A1 !important; }
+    .bg-black { background: #161616 !important; }
+
+    .card-green, .btn-green {
+        background: #19A74A;
+        color: rgb(80, 80, 80) !important;
+        border: none;
+    }
+    .card-green:hover, .btn-green:hover {
+        background: #128037;
+    }
+    .card-purple {
+        background: #8C54A1;
+        color: white !important;
+    }
+    .card-purple:hover {
+        background: #6a387f;
+    }
+    .card-black {
+        background: #161616;
+        color: #fff !important;
+        border: none;
+    }
+    .card-black h4, .card-black p {
+        color: #fff !important;
+    }
+    .card-black:hover {
+        box-shadow: 0 4px 16px rgba(25, 167, 74, 0.10);
+        background: #222;
+    }
+    .card, .card-black, .card-green, .card-purple {
+        border-radius: 0.5rem;
+        transition: box-shadow 0.2s, background 0.2s;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer {
+        border-top: 1px solid #222;
+    }
+    .footer a {
+        color: #19A74A;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline !important;
+    }
+    blockquote.blockquote {
+        background: #f0f1f6;
+        border-left: 4px solid #8C54A1;
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        font-style: italic;
+        color: #555;
+        border-radius: 0.3rem;
+    }
+    @media (max-width: 576px) {
+        .hero h1 { font-size: 2rem; }
+        .hero p { font-size: 1rem; }
+        .card h4 { font-size: 1.1rem; }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand text-green" href="#">CK Mortgage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Buy</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Refinance</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Rates</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Calculators</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Loan Options</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Knowledge</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero text-center text-white py-5" style="background: linear-gradient(135deg, #19A74A 60%, #8C54A1 100%);">
+        <h1 class="mb-3">Refinance Made Easy</h1>
+        <p class="lead">Lower your monthly payment, access equity, or lock in a better rate. Ready to find your savings?</p>
+        <a href="YOUR_REFINANCE_APP_LINK.html" class="btn btn-light btn-lg me-2">Start My Refinance Application</a>
+        <a href="rates.html" class="btn btn-outline-light btn-lg ms-2">See Today's Rates</a>
+    </section>
+    <section class="container py-5 text-center">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card card-green p-3 shadow-sm h-100">
+                    <h4>Fast Online Approval</h4>
+                    <p>Start and finish your refinance without leaving your home.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card card-purple p-3 shadow-sm h-100">
+                    <h4>Lower Payments</h4>
+                    <p>See how much you can save on monthly payments or cash out equity.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card card-black p-3 shadow-sm h-100 text-white">
+                    <h4>Expert Advice</h4>
+                    <p>Our team guides you every step of the way for a stress-free experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials py-5" style="background: #eee;">
+        <div class="container text-center">
+            <h3 class="text-purple mb-4">What Our Clients Say</h3>
+            <blockquote class="blockquote">
+                <p>“CK Mortgage made my refinance fast, easy, and stress-free!”</p>
+                <footer class="blockquote-footer">Jane S.</footer>
+            </blockquote>
+            <blockquote class="blockquote mt-4">
+                <p>“Excellent communication and friendly advice at every step.”</p>
+                <footer class="blockquote-footer">Mike P.</footer>
+            </blockquote>
+        </div>
+    </section>
+    <footer class="footer bg-black text-white py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div>
+                &copy; 2025 CK Mortgage (NMLS #2387222) | All rights reserved.
+            </div>
+            <div>
+                <a href="#" class="text-green me-3">Privacy Policy</a>
+                <a href="#" class="text-green">Legal</a>
+            </div>
+            <div>
+                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

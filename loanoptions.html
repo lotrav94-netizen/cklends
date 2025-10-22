@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CK Mortgage – Loan Options</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+}
+.text-green { color: #19A74A !important; }
+.text-purple { color: #8C54A1 !important; }
+.bg-black { background: #161616 !important; }
+
+.card {
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 12px rgba(25, 167, 74, 0.10);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card h3 {
+  font-weight: 600;
+}
+.card p {
+  flex-grow: 1;
+}
+.card-green {
+  background: #19A74A;
+  color: rgb(50, 50, 50);
+}
+.card-green:hover { background: #128037; color: white; }
+.card-purple {
+  background: #8C54A1;
+  color: white;
+}
+.card-purple:hover { background: #6a387f; }
+.card-black {
+  background: #161616;
+  color: white;
+}
+.card-black:hover { background: #222; }
+
+.btn-purple {
+  background-color: #8C54A1;
+  color: white;
+  border: none;
+}
+.btn-purple:hover {
+  background-color: #6a387f;
+  color: white;
+}
+.btn-white {
+  background-color: #fff;
+  color: #161616;
+  border: none;
+}
+.btn-white:hover {
+  background-color: #f8f9fa;
+  color: #8C54A1;
+}
+
+.footer { border-top: 1px solid #222; }
+.footer a { color: #19A74A; text-decoration: none; }
+.footer a:hover { text-decoration: underline !important; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand text-green" href="#">CK Mortgage</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Loan Options</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center text-white py-5" style="background: linear-gradient(135deg, #19A74A 60%, #8C54A1 100%);">
+    <h1 class="mb-3">Explore Your Loan Options</h1>
+    <p class="lead">Find the perfect mortgage program tailored to your goals and lifestyle.</p>
+    <a href="#start-approval" class="btn btn-light btn-lg mt-3">Start My Approval</a>
+  </section>
+
+  <!-- Loan Options Grid -->
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
+      <div class="col">
+        <div class="card card-green p-4">
+          <h3>DSCR Loans</h3>
+          <p>For real estate investors who qualify based on property rental income instead of personal income. Ideal for scaling portfolios fast.</p>
+          <ul>
+            <li>No income verification</li>
+            <li>20% minimum down</li>
+            <li>Qualification by cash flow ratio</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-purple p-4">
+          <h3>Bank Statement Loans</h3>
+          <p>Perfect for self-employed borrowers. Lenders use bank deposits from the last 12–24 months to calculate qualifying income.</p>
+          <ul>
+            <li>12–24 months bank records</li>
+            <li>As low as 10% down</li>
+            <li>Ideal for entrepreneurs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-black p-4">
+          <h3>Conventional 1% Down</h3>
+          <p>Exclusive Rocket Mortgage ONE+ offers a 2% grant on top of your 1% down payment, giving you 3% equity from day one.</p>
+          <ul>
+            <li>Only 1% downpayment from you!</li>
+            <li>Rocket contributes 2%</li>
+            <li>Low PMIs compared to FHA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-green p-4">
+          <h3>FHA Loans</h3>
+          <p>Backed by the Federal Housing Administration, these help buyers with smaller savings or less-than-perfect credit achieve ownership.</p>
+          <ul>
+            <li>3.5% down with 580+ credit</li>
+            <li>Government insured</li>
+            <li>Low closing costs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-purple p-4">
+          <h3>VA Loans</h3>
+          <p>For Veterans and service members with zero down, no mortgage insurance, and flexible qualification standards.</p>
+          <ul>
+            <li>$0 down payment</li>
+            <li>No PMI required</li>
+            <li>Backed by VA benefits</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-black p-4">
+          <h3>Adjustable Rate Mortgages (ARM)</h3>
+          <p>Start with a lower interest rate that adjusts after a fixed term. Great choice for those expecting income growth or early payoff.</p>
+          <ul>
+            <li>Lower initial rate</li>
+            <li>5/1, 7/1, 10/1 terms available</li>
+            <li>Fixed then adjusts yearly</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-green p-4">
+          <h3>Renovation (Reno) Loans</h3>
+          <p>Finance home purchase and improvements in one loan. Ideal for fixer-uppers and upgrading current homes.</p>
+          <ul>
+            <li>Combine purchase + renovation</li>
+            <li>FHA 203(k) and CHOICERenovation options</li>
+            <li>Up to 75% of improved value</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#start-approval" class="btn btn-purple btn-lg px-5 py-3 shadow-sm" style="font-weight:700; font-size:1.35rem; border-radius: 2rem;">Start My Approval</a>
+    </div>
+  </div>
+
+  <!-- DPA Programs Promo Banner -->
+  <section class="dpa-banner text-center py-5" style="background: linear-gradient(120deg, #161616 60%, #19A74A 100%); border-radius: 1rem; margin: 3rem auto; box-shadow: 0 4px 16px rgba(25,167,74,0.08); position: relative; overflow: hidden;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="mb-3">
+            <span class="badge bg-green text-white px-3 py-2 fs-6" style="background:#19A74A; letter-spacing:1px;">Down Payment Assistance</span>
+          </div>
+          <h2 class="text-white mb-3" style="font-weight: 900; letter-spacing: 1px;">Unlock Your Homeownership</h2>
+          <p class="lead mb-4" style="color: #fff; max-width:600px; margin:auto;">
+            Special DPA programs, lightning-fast closings, and a <span class="text-purple fw-bold">dedicated team</span> committed to your needs. Invest with confidence—let’s get you started!
+          </p>
+          <a href="#start-approval" class="btn btn-white btn-lg px-5 py-3 shadow-sm" style="font-weight: 700; font-size: 1.35rem; border-radius: 2rem; margin-top:8px;">
+            Start My Approval
+          </a>
+          <div style="margin-top:1.6rem;">
+            <span class="text-light" style="font-size:1.05rem; opacity:0.85;">No obligation • All credit types • Personalized options</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-black text-white py-4">
+    <div class="container text-center">
+      &copy; 2025 CK Mortgage (NMLS #2387222) | All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
